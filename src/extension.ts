@@ -18,15 +18,16 @@ export function activate(context: vscode.ExtensionContext) {
 		'test-task',
 		new vscode.ShellExecution("echo test-task"),
 		'$test-task'
-	)
+	);
 
 	task.presentationOptions = {
 		reveal: vscode.TaskRevealKind.Always,
 		focus: true,
 		panel: vscode.TaskPanelKind.Dedicated,
 		showReuseMessage: false,
-		clear: true
-	}
+		clear: true,
+		close: true,
+	};
 
 	task.isBackground = true;
 
